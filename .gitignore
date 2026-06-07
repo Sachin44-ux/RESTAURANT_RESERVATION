@@ -1,77 +1,47 @@
+# Keep the best of both
+cat > .gitignore << 'EOF'
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+config.env
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-# Dependencies
-node_modules
-package-lock.json  # Optional: many teams commit this
-yarn.lock          # Optional: commit this if using yarn
-pnpm-lock.yaml     # Optional: commit this if using pnpm
-
-# Build outputs
-dist
-dist-ssr
-build
-.out
-.next
-.nuxt
-
-# Environment variables (CRITICAL - contains secrets!)
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory (testing)
-coverage
-*.lcov
-.nyc_output
-
-# TypeScript
-*.tsbuildinfo
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea
+# OS files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.swp
-*~
-
-# OS generated files
 Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-Desktop.ini
 
-# Temporary folders
-.temp
-.tmp
-.cache
+# Editor files
+.vscode/
+.idea/
+*.swp
 
-# Debug logs
-debug.log
+# Vite / Frontend specific
+*.local
+
+# Backend specific
+myapp/
+uploads/
 
 # Misc
-*.log
-*.bak
-*.orig
+coverage/
+.nyc_output/
+EOF
+
