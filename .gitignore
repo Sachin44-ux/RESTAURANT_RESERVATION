@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+config.env
+.env
+*.log
+.DS_Store
+myapp/
+uploads/
+debug.log
+.idea/
+.vscode/
