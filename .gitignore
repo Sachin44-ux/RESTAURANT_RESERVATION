@@ -1,11 +1,47 @@
+# Keep the best of both
+cat > .gitignore << 'EOF'
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+config.env
 .env
-.DS_Store
+.env.local
+.env.*.local
+
+# Build outputs
 dist/
+dist-ssr/
 build/
+out/
+
+# Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Vite / Frontend specific
+*.local
+
+# Backend specific
+myapp/
+uploads/
+
+# Misc
 coverage/
 .nyc_output/
+EOF
+
